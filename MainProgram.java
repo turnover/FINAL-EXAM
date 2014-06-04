@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MainProgram implements GuessANumber
+public class MainProgram implements GuessANumber,BlackJack
 {
 	boolean done = false;
 	boolean replay = false;
@@ -188,7 +188,7 @@ public class MainProgram implements GuessANumber
 		}
 		public void DealerPlay(){
 			if(dealer<21 && user > dealer)
-				DHand += card.Throw();
+				dealer += card.Throw();
 
 			else if(dealer<21 && user<17)
 				dealer += card.Throw();
